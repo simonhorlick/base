@@ -17,7 +17,7 @@ def rpc_repositories():
     name = "grpc_java",
     remote = "https://github.com/grpc/grpc-java.git",
     tag = "v1.0.0",
-    build_file = str(Label("//third_party/grpc-java.BUILD")),
+    build_file = str(Label("//third_party:grpc-java.BUILD")),
   )
 
   # For exporting metrics from grpc.
