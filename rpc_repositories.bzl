@@ -15,9 +15,9 @@ def rpc_repositories():
 
   native.new_git_repository(
     name = "grpc_java",
-    build_file = "third_party/grpc-java.BUILD",
     remote = "https://github.com/grpc/grpc-java.git",
     tag = "v1.0.0",
+    build_file = str(Label("//third_party/grpc-java.BUILD")),
   )
 
   # For exporting metrics from grpc.
