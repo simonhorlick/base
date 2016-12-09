@@ -54,7 +54,7 @@ java_library(
     ]),
     deps = [
         ":core",
-        "//external:io_netty",
+        "@io_netty_netty_all//jar",
         "@com_google_code_findbugs_jsr305//jar",
         "@guava//jar",
     ],

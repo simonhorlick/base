@@ -3,7 +3,7 @@ def rpc_repositories():
   native.git_repository(
     name = "protobuf",
     # v3.1.0 with changes to compile javanano too.
-    commit = "5e8d377e396e9f4bedf6a460b49ff66c90d943b2",
+    commit = "81c032bb247bd28d3b6fb8c6fe5469bdccad19d4",
     remote = "https://github.com/simonhorlick/protobuf.git",
   )
 
@@ -31,4 +31,16 @@ def rpc_repositories():
   native.maven_server(
     name = "com_github_raw_dinowernli",
     url = "https://raw.github.com/dinowernli/maven-repos/master",
+  )
+
+  native.maven_jar(
+    name = "io_prometheus_simpleclient",
+    artifact = "io.prometheus:simpleclient:0.0.19",
+    sha1 = "c1424b444a7ec61e056a180d52470ff397bc428d",
+  )
+
+  native.maven_jar(
+    name = "io_netty_netty_all",
+    artifact = "io.netty:netty-all:4.1.3.Final",
+    sha1 = "5304532edd11da8ab899baeab80aaf36ccf89d6e",
   )
