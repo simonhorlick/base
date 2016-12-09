@@ -178,7 +178,7 @@ def java_proto_library(name, deps):
         str(Label("@grpc_java//:grpc-java")),
         # This contains compiled well-known protos
         str(Label("@protobuf//:protobuf_java")),
-        str(Label("@com_google_guava_guava//jar")),
+        str(Label("@guava//jar")),
     ]
 
     # Emit a java library rule that compiles the generated sources.
@@ -199,7 +199,7 @@ def javanano_proto_library(name, deps):
         str(Label("@grpc_java//:grpc-java")),
         # This contains compiled well-known protos
         str(Label("@protobuf//:protobuf_java")),
-        str(Label("@com_google_guava_guava//jar")),
+        str(Label("@guava//jar")),
     ]
 
     # Emit a java library rule that compiles the generated sources.
