@@ -24,23 +24,11 @@ def rpc_repositories():
   native.maven_jar(
     name = "me_dinowernli_java_grpc_prometheus",
     artifact = "me.dinowernli:java-grpc-prometheus:0.1.0",
-    sha1 = "539df70269cc254a58cccc5d8e43286b4a73bf30",
+    sha1 = "262c766a0946ce5936341a57bffd5ceeff7aa389",
     server = "com_github_raw_dinowernli",
   )
 
   native.maven_server(
     name = "com_github_raw_dinowernli",
     url = "https://raw.github.com/dinowernli/maven-repos/master",
-  )
-
-  # This bind is required for protobuf_java_util
-  native.bind(
-    name = "gson",
-    actual = "@com_google_code_gson_gson//jar",
-  )
-
-  # This bind is required for protobuf_java_util
-  native.bind(
-    name = "guava",
-    actual = "@com_google_guava_guava//jar",
   )

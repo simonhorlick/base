@@ -3,17 +3,17 @@ def java_base_repositories():
   native.maven_jar(
     name = "jcip_annotations",
     artifact = "net.jcip:jcip-annotations:1.0",
-    sha1 = "",
+    sha1 = "c4ba5371a29ac9b2ad6129b1d39ea38750043eff",
   )
 
   native.maven_jar(
-    name = "com_google_code_gson_gson",
+    name = "gson",
     artifact = "com.google.code.gson:gson:2.8.0",
     sha1 = "c4ba5371a29ac9b2ad6129b1d39ea38750043eff",
   )
 
   native.maven_jar(
-    name = "com_google_guava_guava",
+    name = "guava",
     artifact = "com.google.guava:guava:19.0",
     sha1 = "6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9",
   )
@@ -40,5 +40,5 @@ def java_base_repositories():
   native.maven_jar(
     name = "org_slf4j_slf4j_simple",
     artifact = "org.slf4j:slf4j-simple:1.7.7",
-    sha1 = "a4cf4688fe1c7e3a63aa636cc96d013af537768e"
+    sha1 = "8095d0b9f7e0a9cd79a663c740e0f8fb31d0e2c8"
   )
