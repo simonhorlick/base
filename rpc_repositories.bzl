@@ -44,3 +44,15 @@ def rpc_repositories():
     artifact = "io.netty:netty-all:4.1.3.Final",
     sha1 = "5304532edd11da8ab899baeab80aaf36ccf89d6e",
   )
+
+  native.maven_jar(
+    name = "okhttp",
+    artifact = "com.squareup.okhttp:okhttp:2.7.4",
+    sha1 = "f2c0782541a970b3c15f5e742999ca264b34d0bd",
+  )
+
+  native.maven_jar(
+    name = "okio",
+    artifact = "com.squareup.okio:okio:1.6.0",
+    sha1 = "98476622f10715998eacf9240d6b479f12c66143",
+  )

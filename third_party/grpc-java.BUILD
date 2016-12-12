@@ -99,8 +99,8 @@ java_library(
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
         "@guava//jar",
-        "@okhttp//:okhttp",
-        "@okio//:okio",
+        "@okhttp//jar",
+        "@okio//jar",
     ],
 )
 
