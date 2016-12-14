@@ -3,7 +3,7 @@ def java_base_repositories():
   native.maven_jar(
     name = "jcip_annotations",
     artifact = "net.jcip:jcip-annotations:1.0",
-    sha1 = "c4ba5371a29ac9b2ad6129b1d39ea38750043eff",
+    sha1 = "afba4942caaeaf46aab0b976afd57cc7c181467e",
   )
 
   native.maven_jar(
@@ -34,7 +34,7 @@ def java_base_repositories():
   native.maven_jar(
     name = "org_slf4j_slf4j_api",
     artifact = "org.slf4j:slf4j-api:1.7.7",
-    sha1 = "a4cf4688fe1c7e3a63aa636cc96d013af537768e"
+    sha1 = "2b8019b6249bb05d81d3a3094e468753e2b21311"
   )
 
   native.maven_jar(
