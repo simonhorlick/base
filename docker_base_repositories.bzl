@@ -3,7 +3,7 @@ def docker_base_repositories():
   native.new_http_archive(
       name = "com_github_tianon_docker_brew_debian",
       url = "https://codeload.github.com/tianon/docker-brew-debian/zip/e9bafb113f432c48c7e86c616424cb4b2f2c7a51",
-      build_file = "third_party/debian.BUILD",
+      build_file = str(Label("//third_party:debian.BUILD")),
       type = "zip",
       sha256 = "515d385777643ef184729375bc5cb996134b3c1dc15c53acf104749b37334f68",
   )
