@@ -61,7 +61,7 @@ def gensrcjar_impl(ctx):
     if ctx.attr.is_nano:
       arguments += [
           "--java_rpc_out=nano=true:" + srcjar.path,
-          "--javanano_out=ignore_services=true:" + srcjar.path
+          "--javanano_out=store_unknown_fields=true,ignore_services=true:" + srcjar.path
       ]
     else:
       arguments += [
