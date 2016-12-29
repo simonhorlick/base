@@ -23,9 +23,10 @@ def rpc_repositories():
   )
 
   # For exporting metrics from grpc.
-  native.local_repository(
+  native.git_repository(
     name = "me_dinowernli_java_grpc_prometheus",
-    path = "/Users/simon/projects/lib/java-grpc-prometheus"
+    remote = "https://github.com/simonhorlick/java-grpc-prometheus.git",
+    commit = "2bdb22e4d415b81fd976a9dbb86dfe72e5b3da7f",
   )
 
   # For me_dinowernli_java_grpc_prometheus
