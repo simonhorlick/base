@@ -14,8 +14,8 @@ def java_base_repositories():
 
   native.maven_jar(
     name = "guava",
-    artifact = "com.google.guava:guava:19.0",
-    sha1 = "6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9",
+    artifact = "com.google.guava:guava:20.0",
+    sha1 = "89507701249388e1ed5ddcf8c41f4ce1be7831ef",
   )
 
   # grpc uses annotations provided by this library
