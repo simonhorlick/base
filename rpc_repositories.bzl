@@ -5,21 +5,27 @@ def rpc_repositories():
   native.git_repository(
     name = "protobuf",
     # v3.1.0 with changes to compile javanano too.
-    commit = "81c032bb247bd28d3b6fb8c6fe5469bdccad19d4",
+    commit = "5f28c0a22e511eb4daff9ba609a137920785c806",
     remote = "https://github.com/simonhorlick/protobuf.git",
   )
 
   native.git_repository(
     name = "grpc",
-    commit = "2a69139aa7f609e439c24a46754252a5f9d37500",
+    commit = "11ae5a77d6b2a059ef3fe4742ff2cc8b03b17139",
     remote = "https://github.com/grpc/grpc.git",
   )
 
   native.new_git_repository(
     name = "grpc_java",
     remote = "https://github.com/grpc/grpc-java.git",
-    tag = "v1.0.0",
+    commit = "ea4390cf5c44e066e1649418f69822029bb58f1e",
     build_file = str(Label("//third_party:grpc-java.BUILD")),
+  )
+
+  native.maven_jar(
+    name = "com_google_instrumentation_instrumentation_api",
+    artifact = "com.google.instrumentation:instrumentation-api:0.3.0",
+    sha1 = "a2e145e7a7567c6372738f5c5a6f3ba6407ac354",
   )
 
   # For exporting metrics from grpc.
@@ -57,8 +63,8 @@ def rpc_repositories():
 
   native.maven_jar(
     name = "io_netty_netty_all",
-    artifact = "io.netty:netty-all:4.1.3.Final",
-    sha1 = "5304532edd11da8ab899baeab80aaf36ccf89d6e",
+    artifact = "io.netty:netty-all:4.1.6.Final",
+    sha1 = "6cb4393b29248778f0bcf89118c949304cec8bb8",
   )
 
   native.maven_jar(

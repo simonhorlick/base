@@ -30,6 +30,7 @@ java_library(
     name = "core",
     srcs = glob([
         "core/src/main/java/**/*.java",
+        "context/src/main/java/**/*.java",
     ]),
     # For Android support.
     javacopts = [
@@ -39,8 +40,9 @@ java_library(
     ],
     deps = [
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava//jar",
+        "@com_google_instrumentation_instrumentation_api//jar",
         "@error_prone//annotations",
+        "@guava//jar",
     ],
 )
 
@@ -54,9 +56,9 @@ java_library(
     ]),
     deps = [
         ":core",
-        "@io_netty_netty_all//jar",
         "@com_google_code_findbugs_jsr305//jar",
         "@guava//jar",
+        "@io_netty_netty_all//jar",
     ],
 )
 
