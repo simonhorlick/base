@@ -27,7 +27,7 @@ def go_grpc_gateway_library(name, src):
           "    -I.",
           "    -Iexternal/com_github_simonhorlick_base/third_party/googleapis", # This is super hacky
           "    --plugin=protoc-gen-go=$(location " + go_plugin_label + ")",
-          "    --plugin=grpc-gateway=$(location " + grpc_gateway_plugin_label + ")",
+          "    --plugin=protoc-gen-grpc-gateway=$(location " + grpc_gateway_plugin_label + ")",
           "    --go_out=" + inputmaps + ",plugins=grpc:$(GENDIR)",
           "    --grpc-gateway_out=logtostderr=true:$(GENDIR)",
           "    $(location " + src + ")"]),
