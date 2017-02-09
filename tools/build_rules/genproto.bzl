@@ -186,7 +186,11 @@ def java_proto_library(name, deps):
         name=name,
         srcs=[name + "_srcjar"],
         deps=deps,
-        tags=["intellij-import-target-output"])
+        tags=["intellij-import-target-output"],
+        javacopts = [
+            "-source 7",
+            "-target 7",
+        ])
 
 def javanano_proto_library(name, deps):
     grpc_java_plugin = Label("@grpc_java//:grpc_java_plugin")
