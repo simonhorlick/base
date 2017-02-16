@@ -82,7 +82,7 @@ def rpc_repositories():
   new_go_repository(
     name = "com_github_grpc_ecosystem_grpc_gateway",
     importpath = "github.com/grpc-ecosystem/grpc-gateway",
-    commit = "372984b6925646ccd2e7987037106b4337def2a9",
+    commit = "686368427ddb9a51628d63db6c74fbc96a206e1f",
   )
 
   new_go_repository(
@@ -94,7 +94,7 @@ def rpc_repositories():
   new_go_repository(
     name = "com_github_golang_protobuf",
     importpath = "github.com/golang/protobuf",
-    commit = "1f49d83d9aa00e6ce4fc8258c71cc7786aec968a",
+    commit = "8ee79997227bf9b34611aee7946ae64735e6fd93",
   )
 
   new_go_repository(
@@ -105,6 +105,14 @@ def rpc_repositories():
 
   new_go_repository(
     name = "org_golang_google_grpc",
-    tag = "v1.0.1-GA",
+    # Note that this needs to be kept in line with com_github_golang_protobuf so the
+    # generated sources are compatible.
+    tag = "v1.0.4",
     importpath = "google.golang.org/grpc",
+  )
+
+  new_go_repository(
+    name = "com_github_gorilla_handlers",
+    tag = "v1.2",
+    importpath = "github.com/gorilla/handlers",
   )
