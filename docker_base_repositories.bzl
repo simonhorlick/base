@@ -11,8 +11,8 @@ def docker_base_repositories():
   # Java runtime layer for docker containers.
   native.http_file(
       name = "openjdk_8_jre_headless",
-      url = "http://ftp.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u111-b14-2~bpo8+1_amd64.deb",
-      sha256 = "b1cd4c241e851fae0c7c615ee40ec30bc63da3025efb4aa887ac99728809a0c4",
+      url = "http://ftp.tw.debian.org/debian/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u121-b13-1~bpo8+1_amd64.deb",
+      sha256 = "16c3846091ab2ba9ff5938a8ace017ef2b8aafa1585f2eed120da26d30d658a5",
   )
 
   # Required by jvm runtime.
@@ -34,8 +34,8 @@ def docker_base_repositories():
   # container.
   native.http_file(
     name = "libssl_linux_deb",
-    url = "http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb",
-    sha256 = "e38239b8ab5e2b944aafe1f7484f3cab1100f8807a2e104b026adebda71afba6",
+    url = "http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u6_amd64.deb",
+    sha256 = "0fc777d9242fd93851eb49c4aafd22505048b7797c0178f20c909ff918320619",
   )
 
   native.http_file(
@@ -46,6 +46,6 @@ def docker_base_repositories():
 
   native.http_file(
     name = "ca_certificates",
-    url = "http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20141019+deb8u1_all.deb",
-    sha256 = "f58d646045855277c87f532ea5c18df319e91d9892437880c9a0169b834f1bd8",
+    url = "http://ftp.tw.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20141019+deb8u2_all.deb",
+    sha256 = "bc6340541700618d4cb0441ee9ad159a9c8fd2063200280ff6cdf96b1595beb2",
   )
