@@ -67,7 +67,6 @@ java_library(
     srcs = glob([
         "protobuf/src/main/java/**/*.java",
         "protobuf-lite/src/main/java/**/*.java",
-        "protobuf-nano/src/main/java/**/*.java",
     ]),
     # For Android support.
     javacopts = [
@@ -80,6 +79,24 @@ java_library(
         "@guava//jar",
         "@protobuf//:protobuf_java",
         "@protobuf//:protobuf_java_util",
+    ],
+)
+
+java_library(
+    name = "protobuf-nano",
+    srcs = glob([
+        "protobuf-nano/src/main/java/**/*.java",
+    ]),
+    # For Android support.
+    javacopts = [
+        "-source 7",
+        "-target 7",
+    ],
+    deps = [
+        ":core",
+        "@com_google_code_findbugs_jsr305//jar",
+        "@guava//jar",
+        "@protobuf//:protobuf_javanano",
     ],
 )
 
