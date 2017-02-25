@@ -61,7 +61,7 @@ def gensrcjar_impl(ctx):
     if ctx.attr.is_nano:
       arguments += [
           "--java_rpc_out=nano=true:" + srcjar.path,
-          "--javanano_out=store_unknown_fields=true,ignore_services=true:" + srcjar.path
+          "--javanano_out=generate_equals=true,enum_style=java,store_unknown_fields=true,ignore_services=true:" + srcjar.path
       ]
     else:
       arguments += [
@@ -201,8 +201,8 @@ def javanano_proto_library(name, deps):
 
     deps = deps + [
         str(Label("@grpc_java//:grpc-java")),
-        # This contains compiled well-known protos
-        str(Label("@protobuf//:protobuf_java")),
+        str(Label("@grpc_java//:protobuf-nano")),
+        str(Label("@protobuf//:protobuf_javanano")),
         str(Label("@guava//jar")),
     ]
 
