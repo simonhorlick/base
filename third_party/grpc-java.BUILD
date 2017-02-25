@@ -143,12 +143,9 @@ java_library(
 java_library(
     name = "grpc-java",
     exports = [
-        #':auth', # don't need for plain grpc
         ":core",
-        ":protobuf",
         ":stub",
         "@com_google_code_findbugs_jsr305//jar",
-        "@protobuf//:protobuf_java",
         "@guava//jar",
     ],
 )

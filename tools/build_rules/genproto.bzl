@@ -176,6 +176,7 @@ def java_proto_library(name, deps):
 
     deps = deps + [
         str(Label("@grpc_java//:grpc-java")),
+        str(Label("@grpc_java//:protobuf")),
         # This contains compiled well-known protos
         str(Label("@protobuf//:protobuf_java")),
         str(Label("@guava//jar")),
