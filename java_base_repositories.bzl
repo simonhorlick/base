@@ -7,7 +7,7 @@ def java_base_repositories():
   )
 
   native.maven_jar(
-    name = "gson",
+    name = "com_google_code_gson",
     artifact = "com.google.code.gson:gson:2.8.0",
     sha1 = "c4ba5371a29ac9b2ad6129b1d39ea38750043eff",
   )
