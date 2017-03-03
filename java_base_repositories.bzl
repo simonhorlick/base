@@ -13,16 +13,29 @@ def java_base_repositories():
   )
 
   native.maven_jar(
-    name = "guava",
-    artifact = "com.google.guava:guava:20.0",
-    sha1 = "89507701249388e1ed5ddcf8c41f4ce1be7831ef",
+      name = "com_google_j2objc_j2objc_annotations",
+      artifact = "com.google.j2objc:j2objc-annotations:1.3",
+      sha1 = "ba035118bc8bac37d7eff77700720999acd9986d",
+  )
+
+  native.maven_jar(
+      name = "org_codehaus_mojo_animal_sniffer_annotations",
+      artifact = "org.codehaus.mojo:animal-sniffer-annotations:1.15",
+      sha1 = "3f19b51588ad71482ce4c169f54f697b6181d1b4",
+  )
+
+  native.new_git_repository(
+      name = "guava",
+      tag = "v21.0",
+      remote = "https://github.com/google/guava.git",
+      build_file = str(Label("//third_party:guava.BUILD")),
   )
 
   # grpc uses annotations provided by this library
   native.git_repository(
     name = "error_prone",
-    commit = "4c2a0a40af9a9f2dc9855c1ef31dfd84290a8870",
-    remote = "https://github.com/simonhorlick/error-prone.git",
+    tag = "v2.0.18",
+    remote = "https://github.com/google/error-prone.git",
   )
 
   native.maven_jar(
