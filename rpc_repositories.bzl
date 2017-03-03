@@ -5,7 +5,7 @@ def rpc_repositories():
   native.git_repository(
     name = "protobuf",
     # v3.1.0 with changes to compile javanano too.
-    commit = "555f19c5b30428e1c8157660cad2765a384dbc60",
+    commit = "fbc706859d8a59a26a439873b06e1cae45b9bdfa",
     remote = "https://github.com/simonhorlick/protobuf.git",
   )
 

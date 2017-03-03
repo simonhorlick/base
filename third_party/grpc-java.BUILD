@@ -40,9 +40,9 @@ java_library(
     ],
     deps = [
         "@com_google_code_findbugs_jsr305//jar",
+        "@com_google_guava",
         "@com_google_instrumentation_instrumentation_api//jar",
         "@error_prone//annotations",
-        "@guava",
     ],
 )
 
@@ -57,7 +57,7 @@ java_library(
     deps = [
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
         "@io_netty_netty//:netty",
     ],
 )
@@ -76,7 +76,7 @@ java_library(
     deps = [
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
         "@protobuf//:protobuf_java",
         "@protobuf//:protobuf_java_util",
     ],
@@ -95,7 +95,7 @@ java_library(
     deps = [
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
         "@protobuf//:protobuf_javanano",
     ],
 )
@@ -117,7 +117,7 @@ java_library(
     deps = [
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
         "@okhttp//jar",
         "@okio//jar",
     ],
@@ -136,7 +136,7 @@ java_library(
     deps = [
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
     ],
 )
 
@@ -146,7 +146,7 @@ java_library(
         ":core",
         ":stub",
         "@com_google_code_findbugs_jsr305//jar",
-        "@guava",
+        "@com_google_guava",
     ],
 )
 

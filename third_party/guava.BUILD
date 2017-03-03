@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 java_library(
-    name = "guava",
+    name = "com_google_guava",
     srcs = glob([
         "guava/src/com/google/**/*.java",
     ]),

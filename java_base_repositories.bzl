@@ -27,7 +27,7 @@ def java_base_repositories():
   # Guava v21 adds Java 8 features that aren't supported on Android. As of v21
   # there is no way to support Android, so until that happens we stick to v20.
   native.new_git_repository(
-      name = "guava",
+      name = "com_google_guava",
       tag = "v20.0",
       remote = "https://github.com/google/guava.git",
       build_file = str(Label("//third_party:guava.BUILD")),
