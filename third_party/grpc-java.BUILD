@@ -58,7 +58,7 @@ java_library(
         ":core",
         "@com_google_code_findbugs_jsr305//jar",
         "@guava//jar",
-        "@io_netty_netty_all//jar",
+        "@io_netty_netty//:netty",
     ],
 )
 

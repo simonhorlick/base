@@ -62,12 +62,6 @@ def rpc_repositories():
   )
 
   native.maven_jar(
-    name = "io_netty_netty_all",
-    artifact = "io.netty:netty-all:4.1.6.Final",
-    sha1 = "6cb4393b29248778f0bcf89118c949304cec8bb8",
-  )
-
-  native.maven_jar(
     name = "okhttp",
     artifact = "com.squareup.okhttp:okhttp:2.7.4",
     sha1 = "f2c0782541a970b3c15f5e742999ca264b34d0bd",
@@ -115,4 +109,80 @@ def rpc_repositories():
     name = "com_github_gorilla_handlers",
     tag = "v1.2",
     importpath = "github.com/gorilla/handlers",
+  )
+
+  #
+  # Transitive dependencies for netty
+  #
+
+  native.git_repository(
+    name = "io_netty_netty",
+    remote = "https://github.com/simonhorlick/netty.git",
+    tag = "netty-4.1.6-bazel.Final",
+  )
+
+  native.maven_jar(
+      name = "apache_commons_logging",
+      artifact = "commons-logging:commons-logging:1.1.1",
+      sha1 = "5043bfebc3db072ed80fbd362e7caf00e885d8ae",
+  )
+
+  native.maven_jar(
+      name = "org_apache_log4j_log4j",
+      artifact = "log4j:log4j:1.2.17",
+      sha1 = "5af35056b4d257e4b64b9e8069c0746e8b08629f",
+  )
+
+  native.maven_jar(
+      name = "org_apache_logging_log4j_log4j_api",
+      artifact = "org.apache.logging.log4j:log4j-api:2.7",
+      sha1 = "8de00e382a817981b737be84cb8def687d392963",
+  )
+
+  native.maven_jar(
+      name = "javassist",
+      artifact = "org.javassist:javassist:3.21.0-GA",
+      sha1 = "598244f595db5c5fb713731eddbb1c91a58d959b",
+  )
+
+  native.maven_jar(
+      name = "com_jcraft_jzlib",
+      artifact = "com.jcraft:jzlib:1.1.3",
+      sha1 = "c01428efa717624f7aabf4df319939dda9646b2d",
+  )
+
+  native.maven_jar(
+      name = "org_eclipse_jetty_alpn_alpn_api",
+      artifact = "org.eclipse.jetty.alpn:alpn-api:1.1.2.v20150522",
+      sha1 = "3db64cbc5da220eda54b30843977622f520eab19",
+  )
+
+  native.maven_jar(
+      name = "org_eclipse_jetty_npn_npn_api",
+      artifact = "org.eclipse.jetty.npn:npn-api:1.1.1.v20141010",
+      sha1 = "64d9cd3cb5079c120d37538f2d0d42665f951892",
+  )
+
+  native.maven_jar(
+      name = "org_jctools_jctools_core",
+      artifact = "org.jctools:jctools-core:1.2.1",
+      sha1 = "ed2af5a88cdfc52df8dcb00f0c03a42d70605930",
+  )
+
+  native.maven_jar(
+      name = "io_netty_netty_tcnative_boringssl_static",
+      artifact = "io.netty:netty-tcnative-boringssl-static:jar:1.1.33.Fork26",
+      sha1 = "03f6a7805566d6fccd8a128f6688c3541a7069d5",
+  )
+
+  native.maven_jar(
+      name = "org_bouncycastle_bcprov_jdk15on",
+      artifact = "org.bouncycastle:bcprov-jdk15on:jar:1.56",
+      sha1 = "a153c6f9744a3e9dd6feab5e210e1c9861362ec7",
+  )
+
+  native.maven_jar(
+      name = "org_bouncycastle_bcpkix_jdk15on",
+      artifact = "org.bouncycastle:bcpkix-jdk15on:jar:1.56",
+      sha1 = "4648af70268b6fdb24674fb1fd7c1fcc73db1231",
   )
